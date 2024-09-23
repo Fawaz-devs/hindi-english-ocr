@@ -2,14 +2,20 @@ import streamlit as st
 from PIL import Image
 from ocr_model import OCRModel
 import json
+import re
 
-def search_text(text, keyword):
+def search_and_highlight(text, keyword):
     if not text or not keyword:
-        return []
+        return text, []
+    
+    pattern = re.compile(re.escape(keyword), re.IGNORECASE)
+    highlighted_text = pattern.sub(lambda m: f"<mark>{m.group()}</mark>", text)
+    
     lines = text.lower().split('\n')
     keyword = keyword.lower()
-    results = [line for line in lines if keyword in line]
-    return results
+    results = [i for i, line in enumerate(lines) if keyword in line]
+    
+    return highlighted_text, results
 
 @st.cache_resource
 def get_ocr_model():
@@ -31,7 +37,8 @@ if uploaded_file is not None:
                 ocr_text = ocr_model.process_image(image)
             
             st.subheader("Extracted Text:")
-            st.text_area("", ocr_text, height=200)
+            text_area = st.empty()
+            text_area.text_area("", ocr_text, height=200)
             
             # Save extracted text as JSON
             json_output = json.dumps({"extracted_text": ocr_text}, ensure_ascii=False, indent=2)
@@ -46,14 +53,18 @@ if uploaded_file is not None:
             search_keyword = st.text_input("Enter a keyword to search")
             
             if search_keyword:
-                search_results = search_text(ocr_text, search_keyword)
+                highlighted_text, search_results = search_and_highlight(ocr_text, search_keyword)
                 if search_results:
+                    st.markdown(f"Found {len(search_results)} matches.")
+                    text_area.markdown(highlighted_text, unsafe_allow_html=True)
+                    
                     st.subheader("Search Results:")
-                    for result in search_results:
-                        highlighted_result = result.replace(search_keyword.lower(), f"<mark>{search_keyword.lower()}</mark>")
-                        st.markdown(f"- {highlighted_result}", unsafe_allow_html=True)
+                    lines = ocr_text.split('\n')
+                    for i in search_results:
+                        st.markdown(f"- Line {i+1}: {lines[i]}")
                 else:
                     st.info("No matching results found.")
+            
         except Exception as e:
             st.error(f"An error occurred during OCR processing: {str(e)}")
 
