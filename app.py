@@ -11,9 +11,8 @@ def search_and_highlight(text, keyword):
     pattern = re.compile(re.escape(keyword), re.IGNORECASE)
     highlighted_text = pattern.sub(lambda m: f"<mark>{m.group()}</mark>", text)
     
-    lines = text.lower().split('\n')
-    keyword = keyword.lower()
-    results = [i for i, line in enumerate(lines) if keyword in line]
+    matches = pattern.finditer(text)
+    results = [m.start() for m in matches]
     
     return highlighted_text, results
 
@@ -72,8 +71,10 @@ if st.session_state.image is not None:
                 
                 st.subheader("Search Results:")
                 lines = st.session_state.ocr_text.split('\n')
-                for i in search_results:
-                    st.markdown(f"- Line {i+1}: {lines[i]}")
+                for i, pos in enumerate(search_results):
+                    line_number = st.session_state.ocr_text.count('\n', 0, pos) + 1
+                    line_content = lines[line_number - 1]
+                    st.markdown(f"- Match {i+1} (Line {line_number}): ...{line_content}...")
             else:
                 st.info("No matching results found.")
 
