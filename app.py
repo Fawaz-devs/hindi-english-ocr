@@ -28,16 +28,21 @@ if 'ocr_text' not in st.session_state:
     st.session_state.ocr_text = ""
 if 'image' not in st.session_state:
     st.session_state.image = None
+if 'last_uploaded_file' not in st.session_state:
+    st.session_state.last_uploaded_file = None
 
 ocr_model = get_ocr_model()
 
 uploaded_file = st.file_uploader("Choose an image file", type=["jpg", "jpeg", "png"])
 
-if uploaded_file is not None:
+if uploaded_file is not None and uploaded_file != st.session_state.last_uploaded_file:
     st.session_state.image = Image.open(uploaded_file)
-    st.image(st.session_state.image, caption="Uploaded Image", use_column_width=True)
+    st.session_state.ocr_text = ""  # Reset OCR text when a new image is uploaded
+    st.session_state.last_uploaded_file = uploaded_file
 
 if st.session_state.image is not None:
+    st.image(st.session_state.image, caption="Uploaded Image", use_column_width=True)
+
     if st.button("Perform OCR") or st.session_state.ocr_text:
         if not st.session_state.ocr_text:
             with st.spinner("Processing OCR..."):
