@@ -42,10 +42,10 @@
             You can find the requirements.txt file in the hindi-english-ocr folder.
             or you can refer to the below text :
             Dependencies :
-                - streamlit
-                - easyocr
-                - pillow
-                - numpy
+                + streamlit
+                + easyocr
+                + pillow
+                + numpy
         After the completion of installation of the above Dependencies to Run the application use the command below :
         '''bash
         streamlit run app.py 
@@ -59,12 +59,12 @@
     - Download Extracted Text: Download the extracted text in .json format using the "Download JSON" button.
 
 ### Directory
- - The correct structure of directory is as below for the project to run efficiently:
+ ##### The correct structure of directory is as below for the project to run efficiently:
        -  .
-        - ├── app.py               # Main application script (Streamlit)
-        - ├── ocr_model.py         # OCR Model (EasyOCR)
-        - ├── requirements.txt     # Python dependencies
-        - ├── README.md            # Project documentation
+        - ├── app.py               + Main application script (Streamlit)
+        - ├── ocr_model.py         + OCR Model (EasyOCR)
+        - ├── requirements.txt     + Python dependencies
+        - ├── README.md            + Project documentation
 
 ### Code Overview :
         - app.py :-
