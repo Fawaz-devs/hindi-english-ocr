@@ -7,13 +7,13 @@
     The application supports both English and Hindi text recognition using the easyocr library.
 
 ## Table of contents
-    - [Overview](#overview)
-    - [Features](#Features)
-    - [Tech Stack](#Tech-Stack)
-    - [Implementation of LANGLENS](#Implementation-of-the-LANGLENS)
-    - [Usage](#usage)
-    - [Structure of directory](#Directory)
-    - [Code overview](#Code-Overview)
+ - [Overview](#overview)
+ - [Features](#Features)
+ - [Tech Stack](#Tech-Stack)
+ - [Implementation of LANGLENS](#Implementation-of-the-LANGLENS)
+ - [Usage](#usage)
+ - [Structure of directory](#Directory)
+ - [Code overview](#Code-Overview)
 ## The Key Features  of this project are as listed below:
 ### Features
     - Image Upload: Users can upload image files in .jpg, .jpeg, or .png format.
