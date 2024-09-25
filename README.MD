@@ -47,7 +47,7 @@
                 + easyocr
                 + pillow
                 + numpy
-       #### After the completion of installation of the above Dependencies to Run the application use the command below :
+#### After the completion of installation of the above Dependencies to Run the application use the command below :
         '''bash
         # streamlit
         streamlit run app.py 
