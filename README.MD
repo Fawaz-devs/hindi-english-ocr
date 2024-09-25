@@ -34,9 +34,9 @@
     #### How to Install and Run Locally
         - Prerequisites
                 Make sure you have Python 3.x installed on your machine.
-                '''bash
-                git clone https://github.com/Fawaz-devs/hindi-english-ocr.git
-                cd hindi-english-ocr
+'''bash
+git clone https://github.com/Fawaz-devs/hindi-english-ocr.git
+cd hindi-english-ocr
         - Installing Dependencies
             pip install -r requirements.txt
             You can find the requirements.txt file in the hindi-english-ocr folder.
