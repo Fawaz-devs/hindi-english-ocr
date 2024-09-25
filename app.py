@@ -20,7 +20,7 @@ def search_and_highlight(text, keyword):
 def get_ocr_model():
     return OCRModel()
 
-st.title("Hindi-English OCR with Search")
+st.title("LANGLENS")
 
 # Initialize session state
 if 'ocr_text' not in st.session_state:
@@ -79,4 +79,3 @@ if st.session_state.image is not None:
                 st.info("No matching results found.")
 
 st.markdown("---")
-st.markdown("Developed using EasyOCR")
