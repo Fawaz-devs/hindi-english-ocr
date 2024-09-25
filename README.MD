@@ -1,4 +1,4 @@
-# PORJECT NAME : LANG LENS
+# PROJECT NAME : LANG LENS
 
 ## Overview
 
