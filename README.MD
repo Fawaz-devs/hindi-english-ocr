@@ -14,7 +14,7 @@
     - [Usage](#usage)
     - [Structure of directory](#Directory)
     - [Code overview](#Code-Overview)
-##The Key Features  of this project are as listed below:
+## The Key Features  of this project are as listed below:
 ### Features
     - Image Upload: Users can upload image files in .jpg, .jpeg, or .png format.
     - OCR (Optical Character Recognition): The app processes the uploaded image to extract text, which can be in English or Hindi.
