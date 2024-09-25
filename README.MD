@@ -48,7 +48,7 @@
                 + pillow
                 + numpy
 #### After the completion of installation of the above Dependencies to Run the application use the command below :
-        '''bash
+ '''bash
         # streamlit
         streamlit run app.py 
         - Once the app is running, open your browser and go to http://localhost:8501 to access the web interface.
