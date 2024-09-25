@@ -34,11 +34,11 @@
 - How to Install and Run Locally
         - Prerequisites
                 Make sure you have Python 3.x installed on your machine.
-        '''bash
+```bash
             # clone command
             git clone https://github.com/Fawaz-devs/hindi-english-ocr.git
             cd hindi-english-ocr
-        '''
+ ```
 - Installing Dependencies
             pip install -r requirements.txt
             You can find the requirements.txt file in the hindi-english-ocr folder.
@@ -49,11 +49,11 @@
                 + pillow
                 + numpy
 #### After the completion of installation of the above Dependencies to Run the application use the command below :
- '''bash
+ ```bash
         # streamlit
         streamlit run app.py 
         - Once the app is running, open your browser and go to http://localhost:8501 to access the web interface.
-
+```
 #### Usage of LANG LENS:
 - Upload an Image: Choose an image file by clicking the "Choose an image file" button.
 - Perform OCR: Once the image is uploaded, click the "Perform OCR" button to extract the text from the image.
