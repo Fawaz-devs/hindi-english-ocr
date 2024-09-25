@@ -38,6 +38,7 @@
             # clone command
             git clone https://github.com/Fawaz-devs/hindi-english-ocr.git
             cd hindi-english-ocr
+        '''
 - Installing Dependencies
             pip install -r requirements.txt
             You can find the requirements.txt file in the hindi-english-ocr folder.
