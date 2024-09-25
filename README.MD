@@ -6,14 +6,14 @@
     and allows the user to search for keywords within the extracted text.
     The application supports both English and Hindi text recognition using the easyocr library.
 
-### Table of contents
+## Table of contents
     - [Overview](#overview)
     - [Features](#Features)
     - [Tech Stack](#Tech-Stack)
     - [Implementation of LANGLENS](#Implementation-of-the-LANGLENS)
-    - Usage
-    - Structure of directory
-    - Code overview
+    - [Usage](#usage)
+    - [Structure of directory](#Directory)
+    - [Code overview](#Code-Overview)
 ##The Key Features  of this project are as listed below:
 ### Features
     - Image Upload: Users can upload image files in .jpg, .jpeg, or .png format.
@@ -58,7 +58,8 @@
     - Search in Extracted Text: Enter a keyword in the search input to find and highlight specific terms in the extracted text.
     - Download Extracted Text: Download the extracted text in .json format using the "Download JSON" button.
 
-### The correct structure of directory is as below for the project to run efficiently:
+### Directory
+ - The correct structure of directory is as below for the project to run efficiently:
        -  .
         - ├── app.py               # Main application script (Streamlit)
         - ├── ocr_model.py         # OCR Model (EasyOCR)
