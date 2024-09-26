@@ -12,7 +12,7 @@
  - [Features](#Features)
  - [Tech Stack](#Tech-Stack)
  - [Implementation of LANGLENS](#Implementation-of-the-LANGLENS)
- - [Usage](#usage)
+ - [Usage](#usage-of-LANG-LENS)
  - [Structure of directory](#Directory)
  - [Code overview](#Code-Overview)
 ## The Key Features  of this project are as listed below:
