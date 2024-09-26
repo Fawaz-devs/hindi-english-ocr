@@ -56,7 +56,7 @@
         - Once the app is running, open your browser and go to http://localhost:8501 to access the web interface.
 ```
 #### Usage of LANG LENS:
-- Use this link to go to the LANG LENS : ```bash
+- Use this link to go to the LANG LENS : ```bash :
                                                     hindi-english-ocr-final.streamlit.app
                                         ```
 - Upload an Image: Choose an image file by clicking the "Choose an image file" button.
