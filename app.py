@@ -9,12 +9,14 @@ def search_and_highlight(text, keyword):
         return text, []
     
     pattern = re.compile(re.escape(keyword), re.IGNORECASE)
-    highlighted_text = pattern.sub(lambda m: f"<mark>{m.group()}</mark>", text)
+    # Set the highlight color to yellow using inline CSS
+    highlighted_text = pattern.sub(lambda m: f"<mark style='background-color: yellow;'>{m.group()}</mark>", text)
     
     matches = pattern.finditer(text)
     results = [m.start() for m in matches]
     
     return highlighted_text, results
+
 
 @st.cache_resource
 def get_ocr_model():
