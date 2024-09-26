@@ -1,4 +1,5 @@
-# PROJECT NAME : LANG LENS
+# PROJECT NAME : LANG LENS 
+
 
 ## Overview
 
@@ -54,6 +55,9 @@
         - Once the app is running, open your browser and go to http://localhost:8501 to access the web interface.
 
 #### Usage of LANG LENS:
+- Use this link to go to the LANG LENS : ```bash
+                                                    hindi-english-ocr-final.streamlit.app
+                                        ```
 - Upload an Image: Choose an image file by clicking the "Choose an image file" button.
 - Perform OCR: Once the image is uploaded, click the "Perform OCR" button to extract the text from the image.
 - View Extracted Text: The extracted text will be displayed in a text area for review.
