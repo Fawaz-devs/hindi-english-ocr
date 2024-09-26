@@ -57,7 +57,7 @@
 ```
 #### Usage of LANG LENS:
 - Use this link to go to the LANG LENS : ```
-                                                    hindi-english-ocr-final.streamlit.app
+                                                    LANG-LENS.streamlit.app
                                         ```
 - Upload an Image: Choose an image file by clicking the "Choose an image file" button.
 - Perform OCR: Once the image is uploaded, click the "Perform OCR" button to extract the text from the image.
